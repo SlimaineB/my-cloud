@@ -1,4 +1,4 @@
-package fr.slim.mycloud.mycloudspringboot;
+package fr.slim.mycloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

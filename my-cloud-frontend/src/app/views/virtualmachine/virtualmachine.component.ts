@@ -1,3 +1,4 @@
+import { VirtualMachineService } from './../../services/virtualmachineservice.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VirtualMachineComponent implements OnInit {
 
-  constructor() { }
+  constructor(private vmService: VirtualMachineService) { }
 
   ngOnInit(): void {
+    console.log(">>>>>>>>> ngOnInit");
+    this.vmService.addVirtualMachine();
+
   }
+
+
+
 
 }
