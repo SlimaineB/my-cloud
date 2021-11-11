@@ -2,6 +2,8 @@ package fr.slim.mycloud.service;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +34,26 @@ public class VirtualMachineServiceImpl implements VirtualMachineService{
 	}
 	
 	
+	@Override
+	public List<VirtualMachineDTO> listVirtualMachine() {
+		VirtualMachineDTO vm1 = new VirtualMachineDTO();
+		vm1.setId(1);
+		vm1.setVmName("Toto");
+		vm1.setVmCPU(1);
+		vm1.setVmMemory(2048);
+		vm1.setVmIP("192.168.1.1");
+		
+		VirtualMachineDTO vm2 = new VirtualMachineDTO();
+		vm2.setId(1);
+		vm2.setVmName("Titi");
+		vm2.setVmCPU(1);
+		vm2.setVmMemory(2048);
+		vm2.setVmIP("192.168.1.1");
+		
+		
+		return Arrays.asList(vm1,vm2);
+	}
+		
 	private String executeCommand(String command) {
 
 		StringBuffer output = new StringBuffer();

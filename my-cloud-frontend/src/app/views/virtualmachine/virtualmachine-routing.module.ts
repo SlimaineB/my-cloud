@@ -1,6 +1,8 @@
+import { VirtualMachineListComponent } from './list/vm.list.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { VirtualMachineComponent } from './virtualmachine.component';
+import { VirtualMachineComponent } from './create/virtualmachine.component';
+
 
 
 const routes: Routes = [
@@ -12,15 +14,22 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'virtualmachine'
+        redirectTo: 'vm-list'
       },
       {
-        path: 'virtualmachine',
+        path: 'vm-create',
         component: VirtualMachineComponent,
         data: {
           title: 'Create'
         }
-      }
+      },
+        {
+          path: 'vm-list',
+          component: VirtualMachineListComponent,
+          data: {
+            title: 'List'
+          }
+        }
     ]
   }
 ];

@@ -1,4 +1,6 @@
-import { VirtualMachineComponent } from './virtualmachine.component';
+import { VirtualMachineListComponent } from './list/vm.list.component';
+import { VirtualMachineComponent } from './create/virtualmachine.component';
+
 // Angular
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -17,7 +19,8 @@ import { VirtualMachineRoutingModule } from './virtualmachine-routing.module';
     VirtualMachineRoutingModule
   ],
   declarations: [
-    VirtualMachineComponent
+    VirtualMachineComponent,
+    VirtualMachineListComponent
   ]
 })
 export class VirtualMachineModule {

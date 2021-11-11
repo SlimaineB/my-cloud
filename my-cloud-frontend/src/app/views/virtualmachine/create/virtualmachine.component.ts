@@ -1,11 +1,12 @@
-import { ReferentialService } from './../../services/referential.service';
-import { Vm } from './../../models/vm';
-import { VirtualMachineService } from './../../services/virtualmachineservice.service';
+import { Vm } from './../../../models/vm';
+import { ReferentialService } from './../../../services/referential.service';
+import { VirtualMachineService } from './../../../services/virtualmachineservice.service';
+
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-virtualmachine',
+  selector: 'app-vm-create',
   templateUrl: './virtualmachine.component.html',
   styleUrls: ['./virtualmachine.component.scss']
 })

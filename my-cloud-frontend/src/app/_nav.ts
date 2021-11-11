@@ -15,8 +15,13 @@ export const navItems: INavData[] = [
     name: 'Virtual Machines'
   },
   {
+    name: 'List VM',
+    url: '/virtualmachine/vm-list',
+    icon: 'icon-drop'
+  },
+  {
     name: 'Create VM',
-    url: '/virtualmachine/virtualmachine',
+    url: '/virtualmachine/vm-create',
     icon: 'icon-drop'
   },
   {

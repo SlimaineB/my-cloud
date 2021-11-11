@@ -1,7 +1,8 @@
 ﻿export class Vm {
     id: number;
     vmName: string;
-    vmtType: string;
+    vmType: string;
     vmCPU: number;
     vmMemory: number;
+    vmIP: string;
 }

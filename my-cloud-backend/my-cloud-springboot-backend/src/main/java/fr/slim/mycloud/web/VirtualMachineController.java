@@ -1,5 +1,6 @@
 package fr.slim.mycloud.web;
 
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.slf4j.Logger;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,6 +42,17 @@ public class VirtualMachineController {
 		cloudRequest.setId(ThreadLocalRandom.current().nextInt());
 
 		return ResponseEntity.status(HttpStatus.OK).body(cloudRequest);
+
+	}
+	
+	
+	@GetMapping
+	public ResponseEntity<List<VirtualMachineDTO>> listVirtualMachine() {
+		logger.info("lisVirtualMachine called" );
+
+		List<VirtualMachineDTO> vms=virtualMachineService.listVirtualMachine();
+
+		return ResponseEntity.status(HttpStatus.OK).body(vms);
 
 	}
 

@@ -8,6 +8,7 @@ public class VirtualMachineDTO {
 	private String vmType;
 	private Integer vmCPU;
 	private Integer vmMemory;
+	private String vmIP;
 
 	
 	public VirtualMachineDTO() {
@@ -65,11 +66,23 @@ public class VirtualMachineDTO {
 	}
 
 
+	public String getVmIP() {
+		return vmIP;
+	}
+
+
+	public void setVmIP(String vmIP) {
+		this.vmIP = vmIP;
+	}
+
+
 	@Override
 	public String toString() {
 		return "VirtualMachineDTO [id=" + id + ", vmName=" + vmName + ", vmType=" + vmType + ", vmCPU=" + vmCPU
-				+ ", vmMemory=" + vmMemory + "]";
+				+ ", vmMemory=" + vmMemory + ", vmIP=" + vmIP + "]";
 	}
+
+
 
 	
 }
