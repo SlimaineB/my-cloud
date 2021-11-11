@@ -32,25 +32,18 @@ public class VirtualMachineController {
 	@PostMapping
 	public ResponseEntity<CloudRequestDTO> createVirtualMachine(@RequestBody VirtualMachineDTO newVm) {
 		logger.info("createVirtualMachine called" + newVm);
-		VirtualMachineDTO vm = new VirtualMachineDTO();
-		vm.setId(1);
-		vm.setVmName("My First VM");
 
-		// virtualMachineService.createVirtualMachine(vm);
-
-		CloudRequestDTO cloudRequest = new CloudRequestDTO();
-		cloudRequest.setId(ThreadLocalRandom.current().nextInt());
+		CloudRequestDTO cloudRequest = virtualMachineService.createVirtualMachine(newVm);
 
 		return ResponseEntity.status(HttpStatus.OK).body(cloudRequest);
 
 	}
-	
-	
+
 	@GetMapping
 	public ResponseEntity<List<VirtualMachineDTO>> listVirtualMachine() {
-		logger.info("lisVirtualMachine called" );
+		logger.info("lisVirtualMachine called");
 
-		List<VirtualMachineDTO> vms=virtualMachineService.listVirtualMachine();
+		List<VirtualMachineDTO> vms = virtualMachineService.listVirtualMachine();
 
 		return ResponseEntity.status(HttpStatus.OK).body(vms);
 

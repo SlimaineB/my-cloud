@@ -1,5 +1,6 @@
 package fr.slim.mycloud.dto;
 
+import fr.slim.mycloud.domain.entity.VirtualMachine;
 
 public class VirtualMachineDTO {
 
@@ -82,6 +83,30 @@ public class VirtualMachineDTO {
 				+ ", vmMemory=" + vmMemory + ", vmIP=" + vmIP + "]";
 	}
 
+	
+	public static VirtualMachineDTO mapVMtoVMDTO(VirtualMachine vm) {
+		VirtualMachineDTO dto = new VirtualMachineDTO();
+		dto.setId(vm.getId());
+		dto.setVmName(vm.getVmName());
+		dto.setVmType(vm.getVmType());
+		dto.setVmIP(vm.getVmIP());
+		dto.setVmCPU(vm.getVmCPU());
+		dto.setVmMemory(vm.getVmMemory());
+		
+		return dto;
+	}
+	
+	public static VirtualMachine mapVMDTOtoVM(VirtualMachineDTO dto) {
+		VirtualMachine vm = new VirtualMachine();
+		vm.setId(dto.getId());
+		vm.setVmName(dto.getVmName());
+		vm.setVmType(dto.getVmType());
+		vm.setVmIP(dto.getVmIP());
+		vm.setVmCPU(dto.getVmCPU());
+		vm.setVmMemory(dto.getVmMemory());
+		
+		return vm;
+	}
 
 
 	

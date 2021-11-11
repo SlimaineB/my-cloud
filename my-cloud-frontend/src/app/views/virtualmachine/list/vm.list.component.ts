@@ -13,7 +13,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class VirtualMachineListComponent implements OnInit {
 
 
-  virtualMachines;
+  virtualMachines =  [];
 
 
   constructor(

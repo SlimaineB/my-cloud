@@ -32,7 +32,7 @@ export class VirtualMachineService {
 
       /** GET heroes from the server */
   getVirtualMachines(): Observable<Vm[]> {
-    return this.http.get<Vm[]>(this.vmUrl)
+    return this.http.get<Vm[]>(this.vmUrl, this.httpOptions)
       .pipe(
         tap(_ => this.log('fetched Vm')),
         catchError(this.handleError<Vm[]>('getVirtualMachines', []))
