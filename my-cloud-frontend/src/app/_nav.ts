@@ -26,6 +26,20 @@ export const navItems: INavData[] = [
   },
   {
     title: true,
+    name: 'Shared Filesystem'
+  },
+  {
+    name: 'List NFS',
+    url: '/sharedfilesystem/nfs-create',
+    icon: 'icon-drop'
+  },
+  {
+    name: 'Create NFS',
+    url: '/sharedfilesystem/nfs-create',
+    icon: 'icon-drop'
+  },
+  {
+    title: true,
     name: 'Theme'
   },
   {

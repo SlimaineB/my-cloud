@@ -1,3 +1,4 @@
+import { SharedFileSystemModule } from './views/sharedfilesystem/sharedfilesystem.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -53,6 +54,10 @@ export const routes: Routes = [
       {
         path: 'virtualmachine',
         loadChildren: () => import('./views/virtualmachine/virtualmachine.module').then(m => m.VirtualMachineModule)
+      },
+      {
+        path: 'sharedfilesystem',
+        loadChildren: () => import('./views/sharedfilesystem/sharedfilesystem.module').then(m => m.SharedFileSystemModule)
       },
       {
         path: 'base',
